@@ -8,6 +8,7 @@ I'm building ScyrolynX into a software company focused on backend engineering, c
 
 ## 🚀 Current Focus
 
+- SEO writing
 - Backend Development
 - Cloud Engineering
 - DevOps
@@ -45,6 +46,6 @@ Every project is built to solve a real problem, become a portfolio asset, and ev
 
 ## 📫 Connect
 
-- LinkedIn *(Coming Soon)*
-- Hashnode *(Coming Soon)*
+- LinkedIn *https://www.linkedin.com/in/igbodika-henry-linux675codexinspiron/*
+- Hashnode *https://hashnode.com/@SpironX*
 - Website *(Coming Soon)*
