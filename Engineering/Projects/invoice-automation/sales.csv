@@ -1,0 +1,4 @@
+invoice_id,customer,product,quantity,price
+INV-001,Acme Ltd,Website Maintenance,1,150
+INV-002,Blue Ocean,API Integration,2,200
+INV-003,Green Store,Automation Setup,1,350
