@@ -87,3 +87,17 @@
 @keyframes faq-in{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:760px){.values-grid{grid-template-columns:1fr;gap:12px;margin-top:32px}.value-card{min-height:0;padding:23px;border-radius:var(--radius-md)}.value-icon{margin:23px 0 14px}.faq-layout{grid-template-columns:1fr;gap:35px}.faq{width:calc(100% - 20px)}.manifesto{width:calc(100% - 20px);border-radius:var(--radius-lg)}.faq{border-radius:var(--radius-lg)}.project-feature{border-radius:var(--radius-lg);padding:24px}.project-console{border-radius:var(--radius-md)}.contact-panel{border-radius:var(--radius-lg)}}
 @media(max-width:420px){.value-card{padding:20px}.faq-item summary{font-size:12px;padding:19px 0}.faq-answer{padding-right:12px}.hero-art{border-radius:var(--radius-lg)}}
+
+
+/* V3 refinements: softer geometry without losing the experimental engineering character. */
+:root{--radius-soft:18px;--radius-card:24px;--radius-panel:30px;--radius-pill:999px}
+.hero-art{border-radius:var(--radius-panel)}
+.floating-note,.nav-contact,.button,.menu-toggle{border-radius:var(--radius-pill)}
+.capability{border-radius:var(--radius-card)}
+.value-card,.faq-item,.project-feature,.project-console,.contact-panel,.approach-stamp{border-radius:var(--radius-card)}
+.studio-orbit,.studio-orbit-core{border-radius:50%}
+.contact-prompts{display:grid;gap:8px;margin:0 0 25px;max-width:510px}
+.contact-prompts span{display:flex;align-items:flex-start;gap:12px;padding:10px 13px;border:1px solid var(--line);border-radius:var(--radius-soft);background:rgba(23,18,15,.34);font-size:10px;line-height:1.65;color:var(--muted)}
+.contact-prompts b{font:9px var(--mono);color:var(--gold);padding-top:2px}
+.honesty-note{max-width:460px}
+@media(max-width:760px){.hero-art{border-radius:var(--radius-card)}.capability{border-radius:var(--radius-soft)}.contact-prompts span{font-size:11px}}
