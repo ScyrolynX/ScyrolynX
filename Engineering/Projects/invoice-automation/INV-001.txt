@@ -1,18 +1,18 @@
 ================================
-           SCYROLYNX
+           ScyrolynX
     Business Automation
 ================================
 
-INVOICE             
+INVOICE
 
 Invoice ID : INV-001
-Invoice Date: 2026-08-21
+Invoice Date: 2026-09-09
 Customer   : Acme Ltd
 
 ------------------------------------------------------------
 Product                  Qty        Price          Total
 ------------------------------------------------------------
-Website Maintenance       1          $150.00        $150.00
+Monthly Bookkeeping       1          $150.00        $150.00
 ------------------------------------------------------------
                                         Subtotal: $150.00
                                              Tax: $0.00

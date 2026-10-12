@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>ScyrolynX Sales Report</title>
+<style>
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0; padding: 50px;
+    background: #eceef2; color: #16161d;
+}
+.container {
+    background: white; max-width: 800px; margin: 0 auto;
+    padding: 50px; border-radius: 10px;
+}
+.top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+}
+.wordmark {
+    font-size: 46px; font-weight: 800; letter-spacing: -1.5px; margin: 0;
+}
+.wordmark span { color: #6c3ce9; }
+.invoice-to { text-align: right; font-size: 14px; color: #555; }
+.invoice-to strong { color: #16161d; font-size: 16px; }
+.tags { margin: 25px 0; display: flex; gap: 12px; flex-wrap: wrap; }
+.tag {
+    background: #f0edfb; color: #6c3ce9; padding: 8px 16px;
+    border-radius: 20px; font-size: 13px; font-weight: 600;
+}
+table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+th {
+    background: #16161d; color: white; text-align: left; padding: 12px;
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+td { padding: 12px; border-bottom: 1px solid #eee; font-size: 14px; }
+tr:nth-child(even) td { background: #fafafa; }
+.summary {
+    display: flex; justify-content: flex-end; align-items: center;
+    gap: 20px; margin-top: 25px;
+}
+.summary-lines { text-align: right; font-size: 14px; color: #555; }
+.total-box {
+    background: linear-gradient(135deg, #16161d, #6c3ce9);
+    color: white; padding: 18px 28px; border-radius: 8px; text-align: right;
+}
+.total-box .label { font-size: 12px; opacity: 0.75; text-transform: uppercase; }
+.total-box .amount { font-size: 26px; font-weight: 700; }
+.footer {
+    margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee;
+    display: flex; justify-content: space-between; font-size: 13px; color: #888;
+}
+</style></head><body>
+<div class="container">
+  <div class="top">
+    <h1 class="wordmark">Scyrolyn<span>X</span></h1>
+    <div class="invoice-to">
+      Automated Sales Report<br>
+      <strong>2026-09-09</strong>
+    </div>
+  </div>
+  <div class="tags">
+    <div class="tag">Auto-generated</div>
+    <div class="tag">6 invoices processed</div>
+  </div>
+  <table>
+    <tr><th>Invoice ID</th><th>Customer</th><th>Product</th><th>Qty</th><th>Price</th><th>Total</th></tr>
+    <tr><td>INV-001</td><td>Acme Ltd</td><td>Monthly Bookkeeping</td><td>1</td><td>$150.00</td><td>$150.00</td></tr>
+<tr><td>INV-002</td><td>Blue Ocean</td><td>Tax Filing Preparation</td><td>2</td><td>$200.00</td><td>$400.00</td></tr>
+<tr><td>INV-003</td><td>Green Store</td><td>Payroll Processing</td><td>1</td><td>$350.00</td><td>$350.00</td></tr>
+<tr><td>INV-004</td><td>Nova Traders</td><td>Accounts Reconciliation</td><td>3</td><td>$120.00</td><td>$360.00</td></tr>
+<tr><td>INV-005</td><td>Prime Logistics</td><td>Financial Statement Preparation</td><td>2</td><td>$275.00</td><td>$550.00</td></tr>
+<tr><td>INV-006</td><td>Coral Bookkeeping</td><td>Invoice & Receipt Processing</td><td>2</td><td>$180.50</td><td>$361.00</td></tr>
+  </table>
+  <div class="summary">
+    <div class="total-box">
+      <div class="label">Grand Total</div>
+      <div class="amount">$2171.00</div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>ScyrolynX Business Automation</span>
+  </div>
+</div>
+</body></html>

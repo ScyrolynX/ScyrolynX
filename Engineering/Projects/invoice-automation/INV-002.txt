@@ -1,18 +1,18 @@
 ================================
-           SCYROLYNX
+           ScyrolynX
     Business Automation
 ================================
 
-INVOICE             
+INVOICE
 
 Invoice ID : INV-002
-Invoice Date: 2026-08-21
+Invoice Date: 2026-09-09
 Customer   : Blue Ocean
 
 ------------------------------------------------------------
 Product                  Qty        Price          Total
 ------------------------------------------------------------
-API Integration           2          $200.00        $400.00
+Tax Filing Preparation    2          $200.00        $400.00
 ------------------------------------------------------------
                                         Subtotal: $400.00
                                              Tax: $0.00

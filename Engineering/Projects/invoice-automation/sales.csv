@@ -1,4 +1,7 @@
 invoice_id,customer,product,quantity,price
-INV-001,Acme Ltd,Website Maintenance,1,150
-INV-002,Blue Ocean,API Integration,2,200
-INV-003,Green Store,Automation Setup,1,350
+INV-001,Acme Ltd,Monthly Bookkeeping,1,150.00
+INV-002,Blue Ocean,Tax Filing Preparation,2,200.00
+INV-003,Green Store,Payroll Processing,1,350.00
+INV-004,Nova Traders,Accounts Reconciliation,3,120.00
+INV-005,Prime Logistics,Financial Statement Preparation,2,275.00
+INV-006,Coral Bookkeeping,Invoice & Receipt Processing,2,180.50
