@@ -197,3 +197,203 @@
     transform: none;
   }
 }
+
+
+/* Real portfolio screenshot support */
+.evidence-image {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #17120f;
+}
+.evidence-screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* FINAL GALLERY FIX: keep all three project cards visible and aligned */
+.evidence-gallery .evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* The current script does not observe evidence cards, so do not leave their
+   .reveal class at opacity: 0. This prevents the third card disappearing. */
+.evidence-gallery .reveal {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+.evidence-gallery .evidence-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+}
+
+.evidence-gallery .evidence-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 190px;
+  min-height: 0;
+  aspect-ratio: auto;
+  padding: 10px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, rgba(214,179,106,.09), transparent 70%), #15110e;
+  flex: 0 0 190px;
+}
+
+.evidence-gallery .evidence-screenshot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.evidence-gallery .evidence-image:after {
+  content: none;
+}
+
+.evidence-gallery .evidence-image:before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(214,179,106,.13);
+  border-radius: 9px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.evidence-gallery .evidence-caption {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .evidence-gallery .evidence-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .evidence-gallery .evidence-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  .evidence-gallery .evidence-image {
+    height: 220px;
+    flex-basis: 220px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .evidence-gallery .evidence-card {
+    transition: none;
+  }
+  .evidence-gallery .evidence-card:hover {
+    transform: none;
+  }
+}
+
+
+/* Accessible full-screen project screenshot lightbox */
+.evidence-gallery .evidence-screenshot {
+  cursor: zoom-in;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+.evidence-gallery .evidence-screenshot:hover {
+  filter: brightness(1.08);
+}
+.scx-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  padding: clamp(16px, 4vw, 48px);
+  border: 0;
+  background: rgba(12, 9, 7, 0.96);
+  color: #f3ebdd;
+  overflow: hidden;
+}
+.scx-lightbox[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.scx-lightbox::backdrop { background: rgba(12, 9, 7, 0.96); }
+.scx-lightbox-image {
+  display: block;
+  width: 100%;
+  height: min(78dvh, 100%);
+  object-fit: contain;
+  object-position: center;
+  border-radius: 8px;
+}
+.scx-lightbox-caption {
+  max-width: min(900px, 100%);
+  margin: 0;
+  color: #f3ebdd;
+  font: 500 12px/1.5 'DM Mono', monospace;
+  letter-spacing: .06em;
+  text-align: center;
+}
+.scx-lightbox-controls {
+  position: absolute;
+  inset: 16px 16px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none;
+}
+.scx-lightbox-controls button {
+  pointer-events: auto;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(243,235,221,.28);
+  border-radius: 50%;
+  background: rgba(36,26,20,.92);
+  color: #f3ebdd;
+  font: 400 27px/1 sans-serif;
+  cursor: pointer;
+}
+.scx-lightbox-controls button:hover { border-color: #d6b36a; color: #d6b36a; }
+.scx-lightbox-controls button:focus-visible { outline: 2px solid #d6b36a; outline-offset: 3px; }
+.scx-lightbox-count {
+  margin: 0 auto 0 0;
+  color: rgba(243,235,221,.72);
+  font: 11px 'DM Mono', monospace;
+  letter-spacing: .08em;
+}
+@media (max-width: 600px) {
+  .scx-lightbox { padding: 68px 12px 20px; }
+  .scx-lightbox-image { height: 76dvh; }
+  .scx-lightbox-controls { inset: 12px 12px auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .evidence-gallery .evidence-screenshot { transition: none; }
+}
