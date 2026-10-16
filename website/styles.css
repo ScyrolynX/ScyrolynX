@@ -128,3 +128,72 @@
 @media(max-width:900px){.evidence-grid{grid-template-columns:1fr 1fr}.evidence-card:last-child{grid-column:1/-1}.evidence-card:last-child .evidence-image{aspect-ratio:2.2;min-height:190px}}
 @media(max-width:620px){.evidence-heading{grid-template-columns:1fr;gap:18px}.evidence-grid{grid-template-columns:1fr}.evidence-card:last-child{grid-column:auto}.evidence-card:last-child .evidence-image{aspect-ratio:1.42;min-height:220px}.evidence-image{min-height:210px}.evidence-caption{padding:21px}.evidence-footer{align-items:flex-start;flex-direction:column;gap:15px}.workflow-preview{gap:5px}.workflow-preview>span{min-width:0;padding:9px 6px;font-size:7px}}
 @media(prefers-reduced-motion:reduce){.evidence-card{transition:none}.evidence-card:hover{transform:none}}
+
+/* =========================================================
+   SCX PORTFOLIO VISIBILITY + PREVIEW REFINEMENT
+   Fixes gallery items that are marked .reveal in the HTML but
+   are not included in the current script.js observer targets.
+========================================================= */
+.evidence-gallery .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.evidence-placeholder {
+  isolation: isolate;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.evidence-workflow {
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(214,179,106,.13), transparent 62%),
+    linear-gradient(145deg, #292016, #15110e);
+}
+
+.evidence-api {
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(169,197,161,.08), transparent 62%),
+    linear-gradient(145deg, #211d17, #15110e);
+}
+
+.evidence-qa {
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(168,115,69,.13), transparent 62%),
+    linear-gradient(145deg, #292016, #15110e);
+}
+
+.evidence-caption {
+  min-width: 0;
+}
+
+.evidence-caption h4,
+.evidence-caption p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 620px) {
+  .evidence-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .evidence-caption {
+    padding: 22px 20px 24px;
+  }
+
+  .evidence-heading > p {
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .evidence-gallery .reveal,
+  .evidence-card {
+    animation: none;
+    transition: none;
+  }
+
+  .evidence-gallery .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
